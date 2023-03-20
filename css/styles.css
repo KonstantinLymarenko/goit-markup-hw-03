@@ -313,7 +313,7 @@ body {
   margin-bottom: 72px;
 }
 
-.filter-list-item:not(last-child) {
+.filter-list-item:not(:last-child) {
   margin-right: 24px;
 }
 .filter-btn {
