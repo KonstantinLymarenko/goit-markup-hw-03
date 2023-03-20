@@ -305,7 +305,9 @@ body {
   padding-top: 96px;
   padding-bottom: 120px;
 }
-
+.filter-list-item:not(:last-child) {
+  margin-right: 24px;
+}
 .filter-list {
   display: flex;
   align-items: center;
@@ -313,9 +315,6 @@ body {
   margin-bottom: 72px;
 }
 
-.filter-list-item:not(:last-child) {
-  margin-right: 24px;
-}
 .filter-btn {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
