@@ -26,6 +26,8 @@ img {
   --light-text-background: #f4f4fd;
   --white-text-background: #ffffff;
   --border: #e7e9fc;
+  --background-icons: #f4f4fd;
+  --companies-fill: #8e8f99;
 }
 
 body {
@@ -126,6 +128,21 @@ body {
 }
 
 /* HERO SECTiON */
+.overlay {
+  min-width: 1440px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/hero/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .hero {
   background-color: var(--header-text-color);
   padding-top: 188px;
@@ -180,7 +197,20 @@ body {
 .advantages-menu-items {
   width: calc((100% - 72px) / 4);
 }
-
+.advantages-icons-list {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--background-icons);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 24px 100px;
+  margin-bottom: 8px;
+}
+.advantages-icons {
+  width: 64px;
+  height: 64px;
+}
 .items-header {
   font-weight: 500;
   font-size: 20px;
@@ -268,13 +298,90 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  margin-bottom: 8px;
 }
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--logo-button-color);
+  border-radius: 50%;
+
+}
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--active-btn-color);
+}
+
+.social-list-icon {
+  fill: var(--background-icons);
+}
+
+  
+  
+
+/* COSTUMERS */
+.costumers {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.costumers-header {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--header-text-color);
+  margin-bottom: 72px;
+}
+
+.costumers-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.costumers-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--companies-fill);
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+.costumers-list-icon {
+  fill: var(--companies-fill);
+}
+.costumers-list-link:hover,
+.costumers-list-link:focus {
+  border: 1px solid var(--active-btn-color);
+}
+.costumers-list-link:hover .costumers-list-icon,
+.costumers-list-link:focus .costumers-list-icon {
+  fill: var(--active-btn-color);
+}
+
+
 /* FOOTER */
 .page-footer {
   background-color: var(--header-text-color);
   padding-bottom: 100px;
   padding-top: 100px;
 }
+.footer-container {
+  display: flex;
+  
+ }
+
 .logo-footer {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -300,6 +407,43 @@ body {
   letter-spacing: 0.03em;
   color: var(--light-text-background);
 }
+.footer-social-list-container {
+  margin-left: 120px;
+}
+.footer-social-media-header {
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-social-list-item {
+}
+.footer-social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--logo-button-color);
+  border-radius: 50%;
+}
+.footer-social-list-icon {
+  fill: var(--background-icons);
+}
+.footer-social-list-link:hover,
+.footer-social-list-link:focus {
+  background-color: var(--active-btn-color);
+}
+
 /* PORTFOLiO */
 .portfolio {
   padding-top: 96px;
@@ -332,6 +476,8 @@ body {
 .filter-btn:focus {
   background: var(--active-btn-color);
   color: var(--white-text-background);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 .product-content {
   padding: 32px 0 32px 16px;
@@ -365,3 +511,8 @@ body {
   flex-wrap: wrap;
   flex-basis: calc((100% - 48px) / 3);
 }
+/* .product-item:hover,
+.product-item:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+} */
